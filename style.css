@@ -1,3 +1,9 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(CoupleValentine-z8W6G.ttf);
+  font-weight: bold;
+}
+
 .button{
   background-color:#dd95e4;
   text-align: center;
@@ -7,6 +13,7 @@
   height: 50px;
   margin: 30px;
   border-radius: 12px;
+  font-family: myFirstFont;
 }
 
 .container{
@@ -14,6 +21,11 @@
   width: 1000px;  
   height: 100px;  
   padding-top: 100px;  
-  /* border: 3px solid rgb(155, 80, 155); */
+  color: rgb(155, 80, 155);
+  font-family: myFirstFont;
+}
+
+.hearts{
+  width: 150px;
 }
 
