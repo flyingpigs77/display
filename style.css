@@ -1,0 +1,19 @@
+.button{
+  background-color:#dd95e4;
+  text-align: center;
+  color: #fff;
+  border: 3px solid rgb(155, 80, 155);
+  width: 100px;
+  height: 50px;
+  margin: 30px;
+  border-radius: 12px;
+}
+
+.container{
+  text-align: center;  
+  width: 1000px;  
+  height: 100px;  
+  padding-top: 100px;  
+  /* border: 3px solid rgb(155, 80, 155); */
+}
+
