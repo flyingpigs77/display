@@ -20,7 +20,7 @@
   text-align: center;  
   width: 1000px;  
   height: 100px;  
-  padding-top: 105px;  
+  padding-top: 120px;  
   color: rgb(155, 80, 155);
   font-family: myFirstFont;
 }
@@ -34,8 +34,11 @@
 }
 
 #sloth{
-  left:610px;
-  border: 3px solid #f0cbed;
+  left:650px;
+}
+
+#sloth2{
+  left:650px;
 }
 
 #header{

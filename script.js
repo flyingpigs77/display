@@ -9,6 +9,7 @@ var row4 = 450;
 var row5 = 600;
 var row6 = 750;
 var mover = -1;
+var yes = false;
 
 document.getElementById("header").style.left = "720px";
 
@@ -20,10 +21,6 @@ document.getElementById("heart3").style.left = "400px";
 document.getElementById("heart3").style.top = "1000px";
 document.getElementById("heart4").style.left = "600px";
 document.getElementById("heart4").style.top = "1000px";
-document.getElementById("heart5").style.left = "800px";
-document.getElementById("heart5").style.top = "1000px";
-document.getElementById("heart6").style.left = "1000px";
-document.getElementById("heart6").style.top = "1000px";
 document.getElementById("heart7").style.left = "1200px";
 document.getElementById("heart7").style.top = "1000px";
 document.getElementById("heart8").style.left = "1400px";
@@ -64,13 +61,15 @@ document.getElementById("heart25").style.left = "1400px";
 document.getElementById("heart25").style.top = "1000px";
 document.getElementById("heart26").style.left = "1800px";
 document.getElementById("heart26").style.top = "1000px";
+document.getElementById("heart27").style.left = "600px";
+document.getElementById("heart27").style.top = "1000px";
+document.getElementById("heart28").style.left = "1200px";
+document.getElementById("heart28").style.top = "1000px";
 
 document.getElementById("heart").style.visibility = "hidden";
 document.getElementById("heart2").style.visibility = "hidden";
 document.getElementById("heart3").style.visibility = "hidden";
 document.getElementById("heart4").style.visibility = "hidden";
-document.getElementById("heart5").style.visibility = "hidden";
-document.getElementById("heart6").style.visibility = "hidden";
 document.getElementById("heart7").style.visibility = "hidden";
 document.getElementById("heart8").style.visibility = "hidden";
 document.getElementById("heart9").style.visibility = "hidden";
@@ -91,6 +90,8 @@ document.getElementById("heart23").style.visibility = "hidden";
 document.getElementById("heart24").style.visibility = "hidden";
 document.getElementById("heart25").style.visibility = "hidden";
 document.getElementById("heart26").style.visibility = "hidden";
+document.getElementById("heart27").style.visibility = "hidden";
+document.getElementById("heart28").style.visibility = "hidden";
 
 
 function pressNo() {
@@ -128,6 +129,7 @@ function pressNo() {
         document.getElementById("no").style.visibility = "hidden";
         document.getElementById("header").style.fontSize= "100px";
         document.getElementById("header").style.top += 400;
+        document.getElementById("sloth2").style.visibility = "visible";
         flyIn();
     }    
 }
@@ -137,6 +139,8 @@ function pressYes() {
     document.getElementById("yes").style.visibility = "hidden";
     document.getElementById("no").style.visibility = "hidden";
     document.getElementById("header").style.fontSize= "100px";
+    document.getElementById("sloth2").style.visibility = "visible";
+    yes = true;
     flyIn();
 }
 
@@ -157,8 +161,6 @@ function celebration() {
         document.getElementById("heart2").style.top = row2 + "px";
         document.getElementById("heart3").style.top = row1 + "px";
         document.getElementById("heart4").style.top = row2 + "px";
-        document.getElementById("heart5").style.top = row1 + "px";
-        document.getElementById("heart6").style.top = row2 + "px";
         document.getElementById("heart7").style.top = row1 + "px";
         document.getElementById("heart8").style.top = row2 + "px";
         document.getElementById("heart9").style.top = row1 + "px";
@@ -179,6 +181,10 @@ function celebration() {
         document.getElementById("heart24").style.top = row6 + "px";
         document.getElementById("heart25").style.top = row6 + "px";
         document.getElementById("heart26").style.top = row6 + "px";
+        if (yes) {
+            document.getElementById("heart27").style.top = row4 + "px";
+            document.getElementById("heart28").style.top = row3 + "px";
+        }
     }, 30);
 }    
 
@@ -190,8 +196,6 @@ function flyIn() {
     document.getElementById("heart2").style.visibility = "visible";
     document.getElementById("heart3").style.visibility = "visible";
     document.getElementById("heart4").style.visibility = "visible";
-    document.getElementById("heart5").style.visibility = "visible";
-    document.getElementById("heart6").style.visibility = "visible";
     document.getElementById("heart7").style.visibility = "visible";
     document.getElementById("heart8").style.visibility = "visible";
     document.getElementById("heart9").style.visibility = "visible";
@@ -212,13 +216,16 @@ function flyIn() {
     document.getElementById("heart24").style.visibility = "visible";
     document.getElementById("heart25").style.visibility = "visible";
     document.getElementById("heart26").style.visibility = "visible";
+    if (yes) {
+        document.getElementById("heart27").style.visibility = "visible";
+        document.getElementById("heart28").style.visibility = "visible";
+    }
     var timer = setInterval(function() {
         counter1++;
         var mover1 = -1;
         ypos1 += mover1;
         document.getElementById("heart").style.top = ypos1 + "px";
         document.getElementById("heart3").style.top = ypos1 + "px";
-        document.getElementById("heart5").style.top = ypos1 + "px";
         document.getElementById("heart7").style.top = ypos1 + "px";
         document.getElementById("heart9").style.top = ypos1 + "px";
         if (ypos1 <= 0) {
@@ -234,7 +241,6 @@ function flyIn() {
             ypos2 += mover2;
             document.getElementById("heart2").style.top = ypos2 + "px";
             document.getElementById("heart4").style.top = ypos2 + "px";
-            document.getElementById("heart6").style.top = ypos2 + "px";
             document.getElementById("heart8").style.top = ypos2 + "px";
             document.getElementById("heart10").style.top = ypos2 + "px";
             if (ypos2 == 150) {
@@ -250,6 +256,7 @@ function flyIn() {
             document.getElementById("heart11").style.top = ypos3 + "px";
             document.getElementById("heart12").style.top = ypos3 + "px";
             document.getElementById("heart13").style.top = ypos3 + "px";
+            document.getElementById("heart28").style.top = ypos3 + "px";
             if (ypos3 == 300) {
                 clearInterval(timer3);
             }
@@ -263,6 +270,7 @@ function flyIn() {
             document.getElementById("heart14").style.top = ypos4 + "px";
             document.getElementById("heart15").style.top = ypos4 + "px";
             document.getElementById("heart16").style.top = ypos4 + "px";
+            document.getElementById("heart27").style.top = ypos4 + "px";
             if (ypos4 == 450) {
                 clearInterval(timer4);
             }
