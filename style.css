@@ -23,6 +23,8 @@
   padding-top: 120px;  
   color: rgb(155, 80, 155);
   font-family: myFirstFont;
+  /* place-items: center;
+  border: 3px solid; */
 }
 
 .hearts{
@@ -33,14 +35,11 @@
   margin-top: 50px;
 }
 
-#sloth{
-  left:650px;
-}
-
-#sloth2{
-  left:650px;
-}
-
 #header{
   font-size:50px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
