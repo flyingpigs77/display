@@ -235,7 +235,6 @@ function flyIn() {
     },1);
 
     var timer2 = setInterval(function() {
-        console.log(counter1);
         if (counter1 >= 150) {
             var mover2 = -1;
             ypos2 += mover2;
@@ -243,7 +242,7 @@ function flyIn() {
             document.getElementById("heart4").style.top = ypos2 + "px";
             document.getElementById("heart8").style.top = ypos2 + "px";
             document.getElementById("heart10").style.top = ypos2 + "px";
-            if (ypos2 == 150) {
+            if (ypos2 <= 150) {
                 clearInterval(timer2);
             }
         }
@@ -257,7 +256,7 @@ function flyIn() {
             document.getElementById("heart12").style.top = ypos3 + "px";
             document.getElementById("heart13").style.top = ypos3 + "px";
             document.getElementById("heart28").style.top = ypos3 + "px";
-            if (ypos3 == 300) {
+            if (ypos3 <= 300) {
                 clearInterval(timer3);
             }
         }
@@ -271,7 +270,7 @@ function flyIn() {
             document.getElementById("heart15").style.top = ypos4 + "px";
             document.getElementById("heart16").style.top = ypos4 + "px";
             document.getElementById("heart27").style.top = ypos4 + "px";
-            if (ypos4 == 450) {
+            if (ypos4 <= 450) {
                 clearInterval(timer4);
             }
         }
@@ -286,7 +285,7 @@ function flyIn() {
             document.getElementById("heart19").style.top = ypos5 + "px";
             document.getElementById("heart20").style.top = ypos5 + "px";
             document.getElementById("heart21").style.top = ypos5 + "px";
-            if (ypos5 == 600) {
+            if (ypos5 <= 600) {
                 clearInterval(timer5);
             }
         }
@@ -301,7 +300,7 @@ function flyIn() {
             document.getElementById("heart24").style.top = ypos6 + "px";
             document.getElementById("heart25").style.top = ypos6 + "px";
             document.getElementById("heart26").style.top = ypos6 + "px";
-            if (ypos6 == 750) {
+            if (ypos6 <= 750) {
                 clearInterval(timer6);
             }
         }
